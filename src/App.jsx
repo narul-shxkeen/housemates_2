@@ -6,9 +6,9 @@ function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <>
+    <div className='py-2'>
      <Landing/>
-    </>
+    </div>
   )
 }
 
