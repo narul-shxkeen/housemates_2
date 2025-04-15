@@ -1,8 +1,22 @@
 import React, { useEffect, useState } from "react";
 
-function Center(){
-    // State to track if form should be shown
-    const [showForm, setShowForm] = useState(false);
+function Center({ showFormProp, onFormVisibilityChange }) {
+    // State to track if form should be shown, initialized with prop
+    const [showForm, setShowForm] = useState(showFormProp);
+    
+    // Effect to sync the component state with parent prop changes
+    useEffect(() => {
+        setShowForm(showFormProp);
+    }, [showFormProp]);
+
+    // Custom setter function that updates local state and notifies parent
+    const handleSetShowForm = (value) => {
+        setShowForm(value);
+        // Notify parent component about the change
+        if (onFormVisibilityChange) {
+            onFormVisibilityChange(value);
+        }
+    };
     
     // This effect will load the Tally script after component mounts
     useEffect(() => {
@@ -49,7 +63,7 @@ function Center(){
             {!showForm && (
                 <button 
                     className="bg-[#BB4430] hover:bg-white text-white hover:text-[#BB4430] montserrat-bold text-xl sm:text-2xl rounded-xl p-3 sm:p-4 transform hover:scale-110 transition-all duration-300 ease-in-out border-2 border-[#BB4430] hover:border-[#BB4430] mt-2 sm:mt-0"
-                    onClick={() => setShowForm(true)}
+                    onClick={() => handleSetShowForm(true)}
                 >
                     Join our crib!
                 </button>
@@ -60,7 +74,7 @@ function Center(){
                 <div className="w-full max-w-xl mx-auto my-4 sm:my-6 transition-all duration-300 ease-in-out">
                     <div className="flex justify-end mb-2">
                         <button 
-                            onClick={() => setShowForm(false)}
+                            onClick={() => handleSetShowForm(false)}
                             className="text-[#BB4430] hover:text-[#9A3A2A] text-sm font-medium"
                         >
                             ← Back

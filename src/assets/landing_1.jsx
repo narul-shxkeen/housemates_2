@@ -1,7 +1,27 @@
-import React from "react";
-import Centerpiece from "./landing_centerpiece.jsx"
 
-function Landing(){
+// Parent Landing component with two-way communication
+import React, { useState } from "react";
+import Centerpiece from "./landing_centerpiece.jsx";
+
+function Landing() {
+    // Add state to track if the form should be shown
+    const [showForm, setShowForm] = useState(false);
+    
+    // Handler for button click
+    const handleWaitlistClick = () => {
+        setShowForm(true);
+        // Scroll to the centerpiece form
+        window.scrollTo({
+            top: document.querySelector('.centerpiece-section')?.offsetTop || 0,
+            behavior: 'smooth'
+        });
+    };
+    
+    // Handler for form visibility changes from child component
+    const handleFormVisibilityChange = (isVisible) => {
+        setShowForm(isVisible);
+    };
+    
     return (
         <div className="min-h-screen">
             <div className="flex flex-col sm:flex-row justify-between p-2 sm:p-4 items-center gap-4 sm:gap-0">
@@ -15,7 +35,10 @@ function Landing(){
                 {/* Action bar - responsive layout */}
                 <div className="bg-[#BB4430] flex flex-col sm:flex-row p-2 sm:p-3 gap-3 sm:gap-4 items-center rounded-xl sm:rounded-2xl w-full sm:w-auto">
                     {/* Waitlist button - responsive text size */}
-                    <button className="montserrat-bold text-lg sm:text-xl md:text-2xl text-white p-1 sm:p-2 text-center flex items-center justify-center hover:bg-white hover:text-[#BB4430] transform hover:scale-105 transition-all duration-300 ease-in-out border-2 border-transparent hover:border-white rounded-lg w-full sm:w-auto">
+                    <button 
+                        className="montserrat-bold text-lg sm:text-xl md:text-2xl text-white p-1 sm:p-2 text-center flex items-center justify-center hover:bg-white hover:text-[#BB4430] transform hover:scale-105 transition-all duration-300 ease-in-out border-2 border-transparent hover:border-white rounded-lg w-full sm:w-auto"
+                        onClick={handleWaitlistClick}
+                    >
                         Join the Waitlist
                     </button>
                     
@@ -45,8 +68,13 @@ function Landing(){
             {/* Horizontal line */}
             <hr className="bg-[#BB4430] h-0.5 mx-2 sm:mx-4 border-0 rounded mt-2 sm:mt-0"/>
             
-            {/* Centerpiece component */}
-            <Centerpiece/>
+            {/* Centerpiece component with className for scrolling and showFormProp prop */}
+            <div className="centerpiece-section">
+                <Centerpiece 
+                    showFormProp={showForm} 
+                    onFormVisibilityChange={handleFormVisibilityChange} 
+                />
+            </div>
         </div>
     );
 }
