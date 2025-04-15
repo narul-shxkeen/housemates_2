@@ -69,9 +69,9 @@ function Center({ showFormProp, onFormVisibilityChange }) {
                 </button>
             )}
 
-            {/* Tally form - only shown when button is clicked */}
-            {showForm && (
-                <div className="w-full max-w-xl mx-auto my-4 sm:my-6 transition-all duration-300 ease-in-out">
+            {/* Form container with transition effects */}
+            <div className={`w-full overflow-hidden transition-all duration-500 ease-in-out ${showForm ? 'max-h-[650px] opacity-100 translate-y-0' : 'max-h-0 opacity-0 -translate-y-20'}`}>
+                <div className="w-full max-w-xl mx-auto my-4 sm:my-6">
                     <div className="flex justify-end mb-2">
                         <button 
                             onClick={() => handleSetShowForm(false)}
@@ -90,9 +90,9 @@ function Center({ showFormProp, onFormVisibilityChange }) {
                         className="mt-2 sm:mt-0"
                     ></iframe>
                 </div>
-            )}
+            </div>
             
-            <div className="flex flex-col md:flex-row gap-8 md:gap-12 lg:gap-16 justify-center items-center mt-2 sm:mt-0">
+            <div className={`flex flex-col md:flex-row gap-8 md:gap-12 lg:gap-16 justify-center items-center mt-2 sm:mt-0 transition-all duration-500 ease-in-out ${showForm ? 'transform translate-y-10' : ''}`}>
                 <div className="flex flex-col gap-2 sm:gap-3 items-center">
                     <img 
                         src="./images/landing/Task.svg" 
