@@ -1,8 +1,4 @@
-@import "tailwindcss";
-
-@theme {
-
-}
+@import 'tailwindcss';
 
 
 .montserrat-regular {
