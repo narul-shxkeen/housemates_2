@@ -3,144 +3,68 @@ import AnimatedText from "./animated_text";
 import { motion, useScroll, useTransform } from "framer-motion";
 
 function Center() {
-  const containerRef = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start start", "end start"],
-  });
-
-  // Create a separate scroll tracker for the full container height
-  const { scrollYProgress: fullScrollProgress } = useScroll({
-    target: containerRef,
-    offset: ["start start", "end end"],
-  });
-
-  // Key animations use the original scroll progress
-  const keyScale = useTransform(scrollYProgress, [0, 1], [1, 0.05]);
-  const keyWidth = useTransform(scrollYProgress, [0, 1], ["1000px", "300px"]);
-
-  // Key ring opacity uses the full container scroll progress
-  const keyRingOpacity = useTransform(fullScrollProgress, [0.85, 0.95], [0, 1]);
-
-  // Keep other animations using the original scroll progress
-  const verticalMovement = useTransform(
-    scrollYProgress,
-    [0, 1],
-    ["20%", "45%"]
-  );
-  const horizontalMovement = useTransform(
-    scrollYProgress,
-    [0, 1],
-    ["10%", "-40%"]
-  );
-  const horizontal1Movement = useTransform(
-    scrollYProgress,
-    [0, 1],
-    ["10%", "10%"]
-  );
-  const key1Rotate = useTransform(scrollYProgress, [0, 1], [0, 220]);
-  const key2Rotate = useTransform(scrollYProgress, [0, 1], [0, 140]);
-
   return (
-    <div
-      ref={containerRef}
-      className="flex gap-0 overflow-x-hidden w-full min-h-[200vh]"
-    >
+    <div className="flex gap-0 overflow-x-hidden w-full min-h-[100vh]">
       {/* Phone Container */}
-
-      <div className="fixed left-0 top-0 w-4/12 lg:h-screen p-4 z-[1500]">
+      <div className="relative w-4/12 z-[1000]">
         <img
           src="./images/iphone_frame.svg"
-          className="w-full h-full object-contain absolute"
+          className="absolute h-full w-full object-contain"
           alt="Phone"
         />
-        <div className="relative top-32 left-2">
-          <h4 className="montserrat-bold text-2xl text-center text-[#BB4430]">
+        {/* Text inside phone */}
+        <div className="relative xl:top-[15%] lg:top-[23%] md:top-[30%] top-[33%] left-1/2 transform -translate-x-1/2 w-[80%] text-center">
+          <h4 className="montserrat-medium xl:text-2xl md:text-xl sm:text-lg text-md text-[#BB4430] leading-snug">
             Skip the hunt
             <br />
             Match with your Housemate
           </h4>
         </div>
-        <div className="fixed left-0 top-0 w-4/12 lg:h-screen p-4 z-[1500]">
-          {/* ... other phone container content ... */}
-          <motion.img
-            className="absolute left-[320px] top-[33%] z-[2000]"
-            style={{ transform: "scaleX(-1)", opacity: keyRingOpacity }}
-            src="./images/key_ring.svg"
-            alt="Key ring"
-          />
-          <motion.img
-            className="absolute left-[263px] top-[33%] z-[2000]"
-            style={{ opacity: keyRingOpacity }}
-            src="./images/key_ring.svg"
-            alt="Key ring"
-          />
-        </div>
-
-        {/* Double Keys Container */}
-        <div className="fixed top-0 w-4/12 h-screen p-4 z-[999]">
-          {/* First Key */}
-          <motion.img
-            className="absolute w-[1000px] origin-center"
-            style={{
-              top: verticalMovement,
-              left: horizontalMovement,
-              scale: keyScale,
-              width: keyWidth,
-              rotate: key1Rotate,
-              zIndex: 1001,
-              maxWidth: "none",
-            }}
-            src="./images/key_full.png"
-            alt="image of a key"
-          />
-
-          {/* Second Key */}
-          <motion.img
-            className="absolute w-[1000px] origin-center"
-            style={{
-              top: verticalMovement,
-              left: horizontal1Movement,
-              scale: keyScale,
-              width: keyWidth,
-              rotate: key2Rotate,
-              zIndex: 1000,
-              maxWidth: "none",
-            }}
-            src="./images/key_full.png"
-            alt="image of a key duplicate"
-          />
-        </div>
+        {/* Key below text */}
+        <img
+          src="./images/key_full.png"
+          className="absolute xl:top-[28%] lg:top-[36%] md:top-[43%] top-[44%] left-1/2 w-[45vw] transform -translate-x-1/4 max-w-none"
+          alt="Key"
+        />
       </div>
 
       {/* Content Section */}
-      <div className="flex flex-col items-end h-screen justify-between w-8/12 z-0 fixed left-[31%]">
-        <img src="./images/hm_logo.svg" alt="logo" className="z-10" />
-        <div className="relative bottom-28 flex flex-col justify-between items-start max-w-full">
-          <AnimatedText />
-        </div>
-        <div className="flex gap-2 justify-center items-center justify-items-center pb-3 relative">
-          <p className="montserrat-regular text-[#BB4430] text-lg pb-3 pr-3">
-            Scroll Down
-          </p>
-          <motion.img
-            className="w-[15px] "
-            src="./images/arrow.svg"
-            alt="image of an arrow pointing vertically downwards"
-            initial={{ y: 0 }}
-            animate={{
-              y: [0, -30, 0, -18, 0, -8, 0], // Decaying bounce heights
-            }}
-            transition={{
-              duration: 1.2,
-              times: [0, 0.2, 0.4, 0.6, 0.8, 0.9, 1],
-              ease: "easeInOut",
-              repeat: Infinity,
-              repeatDelay: 3, // 3 seconds pause between bounces
-            }}
-          />
-        </div>
-      </div>
+      <div className="relative w-8/12 h-[100vh] z-0 flex flex-col justify-center items-center z-10">
+  {/* Logo at top right */}
+  <div className="absolute top-3 right-2">
+    <img src="./images/hm_logo.svg" alt="logo" className="z-10" />
+  </div>
+  {/* Centered content */}
+  <div className="flex flex-col items-center gap-6 w-full max-w-full">
+    <AnimatedText className="" />
+    <button
+      className="bg-[#BB4430] p-3 rounded-xl text-white font-bold montserrat-bold lg:text-2xl md:text-xl text-lg cursor-pointer border-2 border-[#BB4430] transition-all duration-300
+        hover:bg-white hover:text-[#BB4430] hover:scale-110 hover:border-[#BB4430]"
+    >
+      Join our Crib
+    </button>
+  </div>
+  {/* Arrow at bottom right */}
+  <div className="flex gap-1 justify-center items-center fixed bottom-3 right-2">
+    <p className="montserrat-regular text-[#BB4430] text-lg pb-3 pr-1">
+      Scroll Down
+    </p>
+    <motion.img
+      className="w-[15px]"
+      src="./images/arrow.svg"
+      alt="Scroll arrow"
+      initial={{ y: 0 }}
+      animate={{ y: [0, -15, 0, -10, 0, -5, 0] }}
+      transition={{
+        duration: 1.2,
+        times: [0, 0.2, 0.4, 0.6, 0.8, 0.9, 1],
+        ease: "easeInOut",
+        repeat: Infinity,
+        repeatDelay: 3,
+      }}
+    />
+  </div>
+</div>
     </div>
   );
 }

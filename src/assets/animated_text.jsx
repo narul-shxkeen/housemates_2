@@ -49,8 +49,8 @@ export default function AnimatedTextHighlight() {
   ];
 
   return (
-    <div className='relative'>
-    <div className="flex flex-col leading-14 justify-end items-start z-10">
+    <div className='relative max-w-full'>
+    <div className="flex flex-col leading-14 justify-start items-start z-10">
     {sentences.map((sentence, idx) => (
       <div
         key={idx}
@@ -60,8 +60,8 @@ export default function AnimatedTextHighlight() {
          <span
          key={index}
          className={`
-           transition-all duration-3000 ease-in-out monserrat-medium text-lg lg:text-4xl sm:text-xl md:text-3xl xl:text-5xl
-         overflow-y-visible`}
+           transition-all duration-3000 ease-in-out text-lg lg:text-4xl sm:text-xl md:text-3xl xl:text-5xl
+         overflow-y-visible montserrat-medium`}
          style={{
            color: part.highlight
              ? (animated ? '#BB4430' : '#ffffff')
