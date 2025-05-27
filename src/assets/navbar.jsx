@@ -3,16 +3,16 @@ import React from "react";
 function Nav() {
   return (
     <div>
-      <div className="flex flex-col sm:flex-row justify-between p-2 sm:p-4 items-center gap-4 sm:gap-0">
+      <div className="flex justify-between p-2 sm:p-4 items-center gap-4 sm:gap-0">
         {/* Logo - responsive sizing */}
         <img
           src="./images/hm_logo.svg"
           alt="Image of the housemates logo"
-          className="w-48 md:w-auto mb-3 sm:mb-0"
+          className="md:w-auto w-1/3 mb-3 sm:mb-0"
         />
 
         {/* Action bar - responsive layout */}
-        <div className="bg-[#BB4430] flex flex-col sm:flex-row p-2 sm:p-3 gap-3 sm:gap-4 items-center rounded-xl sm:rounded-2xl w-full sm:w-auto">
+        <div className="bg-[#BB4430] flex p-2 sm:p-3 gap-3 sm:gap-4 items-center rounded-xl sm:rounded-2xl md:w-auto xs:w-1/4">
           {/* Waitlist button - responsive text size */}
           <button
             className="montserrat-bold text-lg sm:text-xl md:text-2xl text-white p-1 sm:p-2 text-center flex items-center justify-center hover:bg-white hover:text-[#BB4430] transform hover:scale-105 transition-all duration-300 ease-in-out border-2 border-transparent hover:border-white rounded-lg w-full sm:w-auto"
