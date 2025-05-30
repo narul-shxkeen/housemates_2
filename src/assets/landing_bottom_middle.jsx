@@ -6,7 +6,7 @@ function LowerMiddle() {
     <div className="flex flex-col gap-12 mb-10">
 <div
   className="relative py-28 sm:w-[100vw] z-10 flex items-center justify-center 
-             bg-[url('./images/pattern.png')] bg-repeat"
+             bg-[url('/images/pattern.png')] bg-repeat"
 >
 <button
   className="shadow-[0_0_30px_40px_white] z-50 bg-[#BB4430] p-4 rounded-3xl text-white font-bold montserrat-bold 
