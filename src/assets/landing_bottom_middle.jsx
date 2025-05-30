@@ -3,18 +3,22 @@ import Card from "./parts/landingPageCard";
 
 function LowerMiddle() {
   return (
-    <div className="flex flex-col gap-36 mb-10">
-      <div className="relative py-48 sm:w-[100vw] z-0 flex items-center justify-center">
-        <img
-          className="absolute top-0 left-0 w-full h-full object-cover z-0"
-          src="./images/pattern.png"
-          alt="pattern"
-        />
-        <button className="z-10 bg-[#BB4430] p-4 rounded-3xl text-white font-bold montserrat-bold lg:text-4xl md:text-2xl text-xl cursor-pointer border-2 border-[#BB4430] transition-all duration-300 hover:bg-white hover:text-[#BB4430] hover:scale-110 hover:border-[#BB4430]">
-          Join our Crib
-        </button>
-      </div>
-      <div className="flex justify-around items-center flex-wrap gap-6 sm:px-0 px-12">
+    <div className="flex flex-col gap-12 mb-10">
+<div
+  className="relative py-28 sm:w-[100vw] z-10 flex items-center justify-center 
+             bg-[url('./images/pattern.png')] bg-repeat"
+>
+<button
+  className="shadow-[0_0_30px_40px_white] z-50 bg-[#BB4430] p-4 rounded-3xl text-white font-bold montserrat-bold 
+             lg:text-4xl md:text-2xl text-xl cursor-pointer border-2 border-[#BB4430] 
+             transition-all duration-300 hover:bg-white hover:text-[#BB4430] hover:scale-110 hover:border-[#BB4430]"
+>
+  Join our Crib
+</button>
+
+</div>
+
+      <div className="flex justify-around items-center flex-wrap gap-6 sm:px-12 px-28">
         <Card
           title="Match Made in (Housemate) Heaven"
           text="We match you with people who share your lifestyle and preferences"

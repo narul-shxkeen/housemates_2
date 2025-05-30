@@ -12,12 +12,12 @@ function Nav() {
         />
 
         {/* Action bar - responsive layout */}
-        <div className="bg-[#BB4430] flex p-2 sm:p-3 gap-3 sm:gap-4 items-center rounded-xl sm:rounded-2xl md:w-auto xs:w-1/4">
+        <div className="bg-[#BB4430] flex p-1 sm:p-2 gap-2 sm:gap-3 items-center rounded-xl sm:rounded-2xl md:w-auto xs:w-1/4">
           {/* Waitlist button - responsive text size */}
           <button
-            className="montserrat-bold text-lg sm:text-xl md:text-2xl text-white p-1 sm:p-2 text-center flex items-center justify-center hover:bg-white hover:text-[#BB4430] transform hover:scale-105 transition-all duration-300 ease-in-out border-2 border-transparent hover:border-white rounded-lg w-full sm:w-auto"
+            className="montserrat-bold text-md sm:text-lg md:text-xl text-white p-1 sm:p-2 text-center flex items-center justify-center hover:bg-white hover:text-[#BB4430] transform hover:scale-105 transition-all duration-300 ease-in-out border-2 border-transparent hover:border-white rounded-lg w-full sm:w-auto"
           >
-            Join the Waitlist
+            Join the Crib
           </button>
 
           {/* Divider - hidden on extra small screens */}
@@ -38,7 +38,9 @@ function Nav() {
                 className="w-7 md:w-auto cursor-pointer transform hover:scale-125 transition-all duration-300 ease-in-out"
               />
             </a>
-            <a href="" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.linkedin.com/company/housemates-live/"
+                       target="_blank"
+              rel="noopener noreferrer">
               <img
                 src="./images/linkdin2.svg"
                 alt="Logo of linkdin"
@@ -50,7 +52,7 @@ function Nav() {
       </div>
 
       {/* Horizontal line */}
-      <hr className="bg-[#BB4430] h-0.5 mx-2 sm:mx-4 border-0 rounded mt-2 sm:mt-0" />
+      <hr className="bg-[#e7988a] h-0.5 mx-2 sm:mx-4 border-0 rounded mt-2 sm:mt-0" />
     </div>
   );
 }

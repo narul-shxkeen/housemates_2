@@ -3,7 +3,7 @@ import React from "react";
 function Landing() {
   return (
     <div className="flex flex-col items-center gap-6 sm:gap-8 md:gap-10 lg:gap-12 mt-8 sm:mt-12 px-4 sm:px-6 md:px-12">
-      <h1 className="montserrat-bold text-balance text-center text-xl sm:text-2xl md:text-4xl lg:text-6xl leading-snug">
+      <h1 className="montserrat-bold text-balance text-center text-lg sm:text-xl md:text-3xl lg:text-4xl xl:text-5xl leading-snug">
         Skip the hunt
         <br />
         Match with your housemate
@@ -17,9 +17,9 @@ function Landing() {
         />
       </div>
 
-      <p className="monstserrat-medium text-center text-md sm:text-lg md:text-2xl lg:text-3xl leading-relaxed">
+      <p className="monstserrat-medium text-center text-base sm:text-md md:text-lg lg:text-xl xl:text-2xl leading-relaxed">
         No more random housemates! Find a compatible housemate
-        <br className="hidden sm:block" /> who shares your lifestyle preferences and vibe 👀
+        <br className="hidden sm:block" /> who shares your lifestyle preferences and vibe
       </p>
 
       <div className="flex justify-center items-center">
