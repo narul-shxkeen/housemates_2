@@ -6,9 +6,9 @@ function Nav() {
       <div className="flex px-1 sm:px-4 justify-between items-center gap-2 sm:gap-0 h-auto">
         {/* Logo - responsive sizing */}
         <img
-          src="./images/hm_logo.svg"
+          src="./images/hm_logo.png"
           alt="Image of the housemates logo"
-          className="md:w-auto w-1/3 sm:mb-0"
+          className="md:w-auto w-1/3 sm:mb-0 h-[150px] bg-amber-200"
         />
 
         {/* Action bar - responsive layout */}
@@ -26,7 +26,7 @@ function Nav() {
           </h2>
 
           {/* Social icons - responsive layout */}
-          <div className="flex gap-4 sm:gap-3 md:gap-4 items-center">
+          <div className="flex gap-1 items-center">
             <a
               href="https://www.instagram.com/housemates.live/?igsh=ZTdkZWh5Y2k2Ym8z#"
               target="_blank"

@@ -15,7 +15,7 @@ function Landing_Middle_Section() {
 
   return (
     <div className="flex flex-col-reverse sm:flex-row justify-center items-center sm:gap-24 px-0 md:px-8 lg:px-32 py-0 mt-8">
-      <div className="flex flex-col justify-center items-center sm:justify-start gap-14 py-16">
+      <div className="flex flex-col sm:justify-start items-center w-full sm:items-start justify-center gap-14 py-16">
         <h2 className="xl:text-4xl lg:text-3xl md:text-2xl text-lg montserrat-bold text-[#BB4430]">
           How It Works
         </h2>
@@ -52,7 +52,7 @@ function Landing_Middle_Section() {
        <div className="flex justify-center md:justify-start items-center">
       <video
         src="./images/housematesAppVideo.mp4"
-        className="rounded-2xl w-2/3 sm:w-full max-w-md"
+        className="rounded-2xl sm:w-full max-w-[30vw]"
         autoPlay
         loop
         muted
