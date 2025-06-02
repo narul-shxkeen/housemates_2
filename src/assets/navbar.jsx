@@ -35,7 +35,7 @@ function Nav() {
               <img
                 src="./images/instagram2.svg"
                 alt="Logo of instagram"
-                className="w-7 md:w-auto cursor-pointer transform hover:scale-125 transition-all duration-300 ease-in-out"
+                className="w-4 md:w-6 cursor-pointer transform hover:scale-125 transition-all duration-300 ease-in-out"
               />
             </a>
             <a href="https://www.linkedin.com/company/housemates-live/"
@@ -44,7 +44,7 @@ function Nav() {
               <img
                 src="./images/linkdin2.svg"
                 alt="Logo of linkdin"
-                className="w-7 md:w-auto cursor-pointer transform hover:scale-125 transition-all duration-300 ease-in-out"
+                className="w-4 md:w-6 cursor-pointer transform hover:scale-125 transition-all duration-300 ease-in-out"
               />
             </a>
           </div>
