@@ -3,7 +3,7 @@ import React from "react";
 function Nav() {
   return (
     <div className="flex flex-col gap-1">
-      <div className="flex px-1 sm:px-4 justify-between sm:p-4 items-center gap-2 sm:gap-0 h-auto">
+      <div className="flex px-1 sm:px-4 justify-between items-center gap-2 sm:gap-0 h-auto">
         {/* Logo - responsive sizing */}
         <img
           src="./images/hm_logo.svg"
@@ -12,10 +12,10 @@ function Nav() {
         />
 
         {/* Action bar - responsive layout */}
-        <div className="bg-[#BB4430] flex p-1 gap-0 sm:gap-2 items-center rounded-xl sm:rounded-2xl md:w-auto xs:w-1/4">
+        <div className="bg-[#BB4430] flex p-1 sm:p-2 gap-0 sm:gap-1 items-center rounded-xl sm:rounded-2xl md:w-auto xs:w-1/4">
           {/* Waitlist button - responsive text size */}
           <button
-            className="montserrat-bold text-sm sm:text-base md:text-lg text-white pl-1 py-1 text-center flex items-center justify-center hover:bg-white hover:text-[#BB4430] transform hover:scale-105 transition-all duration-300 ease-in-out border-2 border-transparent hover:border-white rounded-lg w-full sm:w-auto"
+            className="montserrat-bold text-sm sm:text-base md:text-lg text-white text-center flex items-center justify-center transform hover:scale-105 transition-all duration-300 ease-in-out w-full sm:w-auto"
           >
             Join the Crib
           </button>

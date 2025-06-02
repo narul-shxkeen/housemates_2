@@ -25,7 +25,7 @@ function Landing() {
 
       <div className="flex justify-center items-center">
         <Link to="/joinourcrib">
-          <button className="bg-[#BB4430] px-3 py-3 sm:px-6 sm:py-2 sm:rounded-2xl rounded-xl text-white font-bold montserrat-bold text-base sm:text-xl md:text-2xl lg:text-3xl cursor-pointer border-2 border-[#BB4430] transition-all duration-300 hover:bg-white hover:text-[#BB4430] hover:scale-110">
+          <button className="bg-[#BB4430] px-6 py-3 sm:px-8 sm:py-4 sm:rounded-3xl rounded-xl text-white font-bold montserrat-bold text-base sm:text-xl md:text-2xl lg:text-3xl cursor-pointer border-2 border-[#BB4430] transition-all duration-300 hover:bg-white hover:text-[#BB4430] hover:scale-110">
             Join our Crib
           </button>
         </Link>
