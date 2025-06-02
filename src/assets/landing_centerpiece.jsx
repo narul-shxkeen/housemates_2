@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Landing() {
   return (
@@ -23,11 +24,11 @@ function Landing() {
       </p>
 
       <div className="flex justify-center items-center">
-        <button
-          className="bg-[#BB4430] px-6 py-3 sm:px-8 sm:py-4 sm:rounded-3xl rounded-xl text-white font-bold montserrat-bold text-base sm:text-xl md:text-2xl lg:text-4xl cursor-pointer border-2 border-[#BB4430] transition-all duration-300 hover:bg-white hover:text-[#BB4430] hover:scale-110"
-        >
-          Join our Crib
-        </button>
+        <Link to="/joinourcrib">
+          <button className="bg-[#BB4430] px-6 py-3 sm:px-8 sm:py-4 sm:rounded-3xl rounded-xl text-white font-bold montserrat-bold text-base sm:text-xl md:text-2xl lg:text-4xl cursor-pointer border-2 border-[#BB4430] transition-all duration-300 hover:bg-white hover:text-[#BB4430] hover:scale-110">
+            Join our Crib
+          </button>
+        </Link>
       </div>
     </div>
   );

@@ -3,7 +3,7 @@ import React from "react";
 function Nav() {
   return (
     <div>
-      <div className="flex justify-between p-2 sm:p-4 items-center gap-4 sm:gap-0">
+      <div className="flex px-4 justify-between sm:p-4 items-center gap-4 sm:gap-0">
         {/* Logo - responsive sizing */}
         <img
           src="./images/hm_logo.svg"
