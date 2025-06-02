@@ -2,8 +2,8 @@ import React from "react";
 
 function Nav() {
   return (
-    <div>
-      <div className="flex px-4 justify-between sm:p-4 items-center gap-4 sm:gap-0">
+    <div className="flex flex-col gap-1">
+      <div className="flex px-1 sm:px-4 justify-between sm:p-4 items-center gap-2 sm:gap-0 h-auto">
         {/* Logo - responsive sizing */}
         <img
           src="./images/hm_logo.svg"
@@ -15,7 +15,7 @@ function Nav() {
         <div className="bg-[#BB4430] flex p-1 gap-0 sm:gap-2 items-center rounded-xl sm:rounded-2xl md:w-auto xs:w-1/4">
           {/* Waitlist button - responsive text size */}
           <button
-            className="montserrat-bold text-sm sm:text-base md:text-lg text-white p-1 sm:p-2 text-center flex items-center justify-center hover:bg-white hover:text-[#BB4430] transform hover:scale-105 transition-all duration-300 ease-in-out border-2 border-transparent hover:border-white rounded-lg w-full sm:w-auto"
+            className="montserrat-bold text-sm sm:text-base md:text-lg text-white pl-1 py-1 text-center flex items-center justify-center hover:bg-white hover:text-[#BB4430] transform hover:scale-105 transition-all duration-300 ease-in-out border-2 border-transparent hover:border-white rounded-lg w-full sm:w-auto"
           >
             Join the Crib
           </button>
@@ -52,7 +52,7 @@ function Nav() {
       </div>
 
       {/* Horizontal line */}
-      <hr className="bg-[#e7988a] h-0.5 mx-2 sm:mx-4 border-0 rounded mt-2 sm:mt-0 opacity-50" />
+      <hr className="bg-[#e7988a] h-0.5 mx-2 sm:mx-4 border-0 rounded opacity-50" />
     </div>
   );
 }
