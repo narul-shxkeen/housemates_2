@@ -18,7 +18,7 @@ function LowerMiddle() {
 
 </div>
 
-      <div className="flex justify-around items-center flex-wrap gap-6 sm:px-12 px-28">
+      <div className="flex justify-around items-center flex-wrap gap-6 px-12 sm:px-6">
         <Card
           title="Match Made in (Housemate) Heaven"
           text="We match you with people who share your lifestyle and preferences"
