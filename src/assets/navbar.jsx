@@ -8,7 +8,7 @@ function Nav() {
         <img
           src="./images/hm_logo.png"
           alt="Image of the housemates logo"
-          className="md:w-auto w-1/3 sm:mb-0 h-[150px] bg-amber-200"
+          className="md:w-auto w-1/3 sm:mb-0 h-[50px]"
         />
 
         {/* Action bar - responsive layout */}

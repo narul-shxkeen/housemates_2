@@ -52,7 +52,7 @@ function Landing_Middle_Section() {
        <div className="flex justify-center md:justify-start items-center">
       <video
         src="./images/housematesAppVideo.mp4"
-        className="rounded-2xl sm:w-full max-w-[30vw]"
+        className="rounded-2xl sm:w-full max-w-[34vw]"
         autoPlay
         loop
         muted
